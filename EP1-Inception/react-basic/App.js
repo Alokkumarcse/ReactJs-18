@@ -3,13 +3,13 @@
  * creating simple tag
  * <h1 id="heading" target="blank"> welcome to React </h1>
  */
-const heading = React.createElement(
+const tag = React.createElement(
 	"h1",
 	{ id: "heading", target: "blank" },
-	"Welcome to React"
+	React.createElement("h5", {}, "Root1:Welcome to React")
 );
 
-console.log(heading, "heading");
+console.log(tag, "tag");
 
 /**
  * crating nested tags
@@ -26,7 +26,7 @@ const nestedTags = React.createElement(
 	React.createElement(
 		"div",
 		{ id: "child" },
-		React.createElement("h1", { id: "head" }, "h1 tag")
+		React.createElement("h1", { id: "head" }, "Root2: h1 tag")
 	)
 );
 
@@ -83,7 +83,16 @@ const nestedSiblings = React.createElement("div", { id: "parent" }, [
 ]);
 
 // creating root for react so that react insert everything here
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root1 = ReactDOM.createRoot(document.getElementById("root1"));
+
+const root2 = ReactDOM.createRoot(document.getElementById("root2"));
+
+const root3 = ReactDOM.createRoot(document.getElementById("root3"));
+
+const root4 = ReactDOM.createRoot(document.getElementById("root4"));
 
 // rendering our root and pass the React element object which is eventually converted into html tags.
-root.render(nestedSiblings);
+root1.render(tag);
+root2.render(nestedTags);
+root3.render(siblings);
+root4.render(nestedSiblings);
