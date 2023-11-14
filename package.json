@@ -1,0 +1,22 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alokkumarcse/ReactJs-18.git"
+  },
+  "author": "Alok Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alokkumarcse/ReactJs-18/issues"
+  },
+  "homepage": "https://github.com/Alokkumarcse/ReactJs-18#readme",
+  "devDependencies": {
+    "parcel": "^2.10.2"
+  }
+}
